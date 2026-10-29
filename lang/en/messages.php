@@ -1,0 +1,100 @@
+<?php
+
+return [
+    // App & Brand
+    'app_name' => 'ENN KANITHAM',
+    'app_tagline' => 'Numerology Compatibility Portal',
+    'hero_title' => 'Numerology Compatibility Portal',
+    'hero_subtitle' => 'Discover the harmony between two lives with the power of numbers.',
+    'get_started' => 'Get Started',
+    'home' => 'Home',
+    'about' => 'About',
+    'services' => 'Services',
+    'login' => 'Login',
+    'sign_up' => 'Sign Up',
+    'logout' => 'Logout',
+    'dashboard' => 'Dashboard',
+    'profile' => 'Profile',
+
+    // Features
+    'feat_love' => 'Love Compatibility',
+    'feat_marriage' => 'Marriage Compatibility',
+    'feat_insight' => 'Relationship Insight',
+    'feat_report' => 'Detailed Report',
+
+    // Auth
+    'create_account' => 'Create an Account',
+    'login_title' => 'Login to your account',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'email' => 'Email',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm Password',
+    'forgot_password' => 'Forgot Password?',
+    'already_have_account' => 'Already have an account?',
+    'dont_have_account' => "Don't have an account?",
+
+    // User Dashboard
+    'welcome_user' => 'Welcome, :name!',
+    'dashboard_lead' => 'Create a new numerology compatibility report to explore your relationship.',
+    'create_new_report' => '+ Create New Report',
+    'new_report' => 'New Report',
+    'my_reports' => 'My Reports',
+    'total_reports' => 'Total Reports',
+    'pending' => 'Pending',
+    'approved' => 'Approved',
+    'emailed' => 'Emailed',
+    'rejected' => 'Rejected',
+
+    // Report Form
+    'create_compat_report' => 'Create Compatibility Report',
+    'person1_details' => 'Person 1 Details',
+    'person2_details' => 'Person 2 Details',
+    'dob' => 'Date of Birth',
+    'calculate_compatibility' => 'Calculate Compatibility',
+
+    // Result Page
+    'compatibility_result' => 'Compatibility Result',
+    'compatibility_score' => 'Compatibility Score',
+    'numerology_numbers' => 'Numerology Numbers',
+    'category' => 'Category',
+    'life_path_number' => 'Life Path Number',
+    'destiny_number' => 'Destiny Number',
+    'soul_number' => 'Soul Number',
+    'personality_number' => 'Personality Number',
+    'result' => 'Result',
+    'generate_pdf' => 'Generate PDF',
+    'save_report' => 'Save Report',
+    'saved_pending_notice' => 'Your report has been saved successfully and submitted for Admin approval. You will receive an email once approved.',
+
+    // PDF & Actions
+    'view' => 'View',
+    'email_action' => 'Email',
+    'download' => 'Download',
+    'action' => 'Action',
+    'created_at' => 'Created At',
+    'status' => 'Status',
+    'view_full_pdf' => 'View Full PDF',
+    'report_details' => 'Report Details',
+    'user_email' => 'User Email',
+    'send_email_btn' => 'Approve & Send Email',
+    'reject_btn' => 'Reject',
+    'back_to_pending' => 'Back to Pending Reports',
+
+    // Admin Dashboard
+    'admin_portal' => 'Admin Portal',
+    'pending_reports' => 'Pending Reports',
+    'approved_reports' => 'Approved Reports',
+    'rejected_reports' => 'Rejected Reports',
+    'all_reports' => 'All Reports',
+    'users' => 'Users',
+    'user_label' => 'User',
+    'person1' => 'Person 1',
+    'person2' => 'Person 2',
+    'score' => 'Score',
+    'approve' => 'Approve',
+    'approved_success' => 'Report approved successfully!',
+    'rejected_success' => 'Report rejected successfully!',
+    'email_sent_success' => 'Report approved and email sent with PDF attachment!',
+    'only_approved_can_email' => 'Only approved reports can be sent via email.',
+];

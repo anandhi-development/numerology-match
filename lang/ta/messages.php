@@ -1,0 +1,100 @@
+<?php
+
+return [
+    // App & Brand
+    'app_name' => 'எண் கணிதம்',
+    'app_tagline' => 'நியூமராலஜி இணக்க போர்ட்டல்',
+    'hero_title' => 'நியூமராலஜி இணக்க போர்ட்டல்',
+    'hero_subtitle' => 'எண்களின் சக்தியைக் கொண்டு இரு உயிர்களுக்கிடையிலான இணக்கத்தைக் கண்டறியுங்கள்.',
+    'get_started' => 'தொடங்குங்கள்',
+    'home' => 'முகப்பு',
+    'about' => 'பற்றி',
+    'services' => 'சேவைகள்',
+    'login' => 'உள்நுழைக',
+    'sign_up' => 'பதிவு செய்க',
+    'logout' => 'வெளியேறு',
+    'dashboard' => 'டாஷ்போர்டு',
+    'profile' => 'சுயவிவரம்',
+
+    // Features
+    'feat_love' => 'காதல் பொருத்தம்',
+    'feat_marriage' => 'திருமணப் பொருத்தம்',
+    'feat_insight' => 'உறவுமுறை புரிதல்',
+    'feat_report' => 'முழுமையான அறிக்கை',
+
+    // Auth
+    'create_account' => 'புதிய கணக்கை உருவாக்கவும்',
+    'login_title' => 'உங்கள் கணக்கில் உள்நுழைக',
+    'first_name' => 'முதல் பெயர்',
+    'last_name' => 'கடைசி பெயர்',
+    'email' => 'மின்னஞ்சல்',
+    'password' => 'கடவுச்சொல்',
+    'confirm_password' => 'கடவுச்சொல்லை உறுதிப்படுத்துக',
+    'forgot_password' => 'கடவுச்சொல் மறந்துவிட்டதா?',
+    'already_have_account' => 'ஏற்கனவே கணக்கு உள்ளதா?',
+    'dont_have_account' => 'கணக்கு இல்லையா?',
+
+    // User Dashboard
+    'welcome_user' => 'வணக்கம், :name!',
+    'dashboard_lead' => 'உங்கள் உறவுமுறையின் இணக்கத்தை அறிய புதிய எண் கணித அறிக்கையை உருவாக்கவும்.',
+    'create_new_report' => '+ புதிய அறிக்கை உருவாக்குக',
+    'new_report' => 'புதிய அறிக்கை',
+    'my_reports' => 'எனது அறிக்கைகள்',
+    'total_reports' => 'மொத்த அறிக்கைகள்',
+    'pending' => 'நிலுவையில்',
+    'approved' => 'ஒப்புதல் அளிக்கப்பட்டது',
+    'emailed' => 'மின்னஞ்சல் அனுப்பப்பட்டது',
+    'rejected' => 'நிராகரிக்கப்பட்டது',
+
+    // Report Form
+    'create_compat_report' => 'பொருத்த அறிக்கை உருவாக்குக',
+    'person1_details' => 'நபர் 1 விவரங்கள்',
+    'person2_details' => 'நபர் 2 விவரங்கள்',
+    'dob' => 'பிறந்த தேதி',
+    'calculate_compatibility' => 'பொருத்தத்தைக் கணக்கிடுக',
+
+    // Result Page
+    'compatibility_result' => 'இணக்க முடிவு',
+    'compatibility_score' => 'பொருத்த மதிப்பெண்',
+    'numerology_numbers' => 'எண் கணித எண்கள்',
+    'category' => 'வகைப்பாடு',
+    'life_path_number' => 'விதி எண் (Life Path)',
+    'destiny_number' => 'பெயர் எண் (Destiny)',
+    'soul_number' => 'ஆன்ம எண் (Soul Number)',
+    'personality_number' => 'ஆளுமை எண் (Personality)',
+    'result' => 'முடிவுரை',
+    'generate_pdf' => 'PDF உருவாக்கவும்',
+    'save_report' => 'அறிக்கையைச் சேமிக்கவும்',
+    'saved_pending_notice' => 'உங்கள் அறிக்கை வெற்றிகரமாகச் சேமிக்கப்பட்டு நிர்வாகி ஒப்புதலுக்கு அனுப்பப்பட்டுள்ளது. ஒப்புதல் கிடைத்ததும் மின்னஞ்சல் வரும்.',
+
+    // PDF & Actions
+    'view' => 'பார்க்க',
+    'email_action' => 'மின்னஞ்சல்',
+    'download' => 'பதிவிறக்கு',
+    'action' => 'நடவடிக்கை',
+    'created_at' => 'உருவாக்கப்பட்ட தேதி',
+    'status' => 'நிலை',
+    'view_full_pdf' => 'முழு PDF பார்க்க',
+    'report_details' => 'அறிக்கை விவரங்கள்',
+    'user_email' => 'பயனர் மின்னஞ்சல்',
+    'send_email_btn' => 'ஒப்புதல் அளித்து மின்னஞ்சல் அனுப்புக',
+    'reject_btn' => 'நிராகரிக்கவும்',
+    'back_to_pending' => 'நிலுவையில் உள்ள அறிக்கைகளுக்குச் செல்க',
+
+    // Admin Dashboard
+    'admin_portal' => 'நிர்வாகி தளம்',
+    'pending_reports' => 'நிலுவை அறிக்கைகள்',
+    'approved_reports' => 'ஒப்புதல் பெற்ற அறிக்கைகள்',
+    'rejected_reports' => 'நிராகரிக்கப்பட்ட அறிக்கைகள்',
+    'all_reports' => 'அனைத்து அறிக்கைகள்',
+    'users' => 'பயனர்கள்',
+    'user_label' => 'பயனர்',
+    'person1' => 'நபர் 1',
+    'person2' => 'நபர் 2',
+    'score' => 'மதிப்பெண்',
+    'approve' => 'ஒப்புதல்',
+    'approved_success' => 'அறிக்கை வெற்றிகரமாக ஒப்புதல் அளிக்கப்பட்டது!',
+    'rejected_success' => 'அறிக்கை நிராகரிக்கப்பட்டது!',
+    'email_sent_success' => 'அறிக்கை ஒப்புதல் அளிக்கப்பட்டு PDF மின்னஞ்சலில் அனுப்பப்பட்டது!',
+    'only_approved_can_email' => 'நிர்வாகியால் ஒப்புதல் அளிக்கப்பட்ட அறிக்கைகளை மட்டுமே மின்னஞ்சல் செய்ய முடியும்.',
+];
