@@ -303,6 +303,11 @@
                     <li class="nav-item">
                         <a class="nav-link px-3 text-secondary" href="{{ route('home') }}#services">{{ __('messages.services') }}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 text-secondary" href="{{ route('documentation') }}" target="_blank">
+                            <i class="bi bi-file-earmark-text me-1"></i> Docs
+                        </a>
+                    </li>
                 </ul>
 
                 <div class="d-flex align-items-center gap-3">

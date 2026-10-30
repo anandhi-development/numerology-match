@@ -11,6 +11,12 @@ use Illuminate\Support\Facades\Route;
 // Public & Localization
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/lang/{locale}', [LocaleController::class, 'switch'])->name('lang.switch');
+Route::get('/documentation', function () {
+    return response()->file(public_path('docs/index.html'));
+})->name('documentation');
+Route::get('/documentation/download', function () {
+    return response()->download(base_path('README.md'), 'ENN_KANITHAM_Documentation.md');
+})->name('documentation.download');
 
 // Guest Authentication
 Route::middleware('guest')->group(function () {
