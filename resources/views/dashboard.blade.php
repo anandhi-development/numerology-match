@@ -17,9 +17,6 @@
                     <a class="sidebar-link" href="{{ route('reports.index') }}">
                         <i class="bi bi-journal-text"></i> {{ __('messages.my_reports') }}
                     </a>
-                    <a class="sidebar-link" href="{{ route('dashboard') }}#profile">
-                        <i class="bi bi-person"></i> {{ __('messages.profile') }}
-                    </a>
                     <hr class="my-2 text-muted">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
@@ -46,8 +43,8 @@
                         </p>
                     </div>
                     <div class="col-md-4 text-md-end">
-                        <a href="{{ route('reports.create') }}" class="btn btn-brand-primary btn-lg shadow-sm">
-                            <i class="bi bi-plus-circle me-1"></i> {{ __('messages.create_new_report') }}
+                        <a href="{{ route('reports.create') }}" class="btn btn-brand-primary btn-sm shadow-sm">
+                            {{ __('messages.create_new_report') }}
                         </a>
                     </div>
                 </div>
@@ -97,14 +94,14 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h5 class="fw-bold text-dark mb-0">{{ __('messages.my_reports') }}</h5>
                     <a href="{{ route('reports.index') }}" class="small text-primary text-decoration-none fw-semibold">
-                        View All <i class="bi bi-arrow-right"></i>
+                        {{ __('messages.view_all') }} <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
 
                 @if($recentReports->isEmpty())
                     <div class="text-center py-5 text-muted">
                         <i class="bi bi-journal-x fs-1 d-block mb-2 text-secondary"></i>
-                        <p class="mb-3">No reports created yet.</p>
+                        <p class="mb-3">{{ __('messages.no_reports_yet') }}</p>
                         <a href="{{ route('reports.create') }}" class="btn btn-brand-primary btn-sm">
                             {{ __('messages.create_new_report') }}
                         </a>

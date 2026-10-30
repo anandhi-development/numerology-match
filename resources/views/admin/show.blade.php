@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-4">
+<div class="container py-4" style="font-size: 0.85rem;">
     
-    <!-- Back Link (as in wireframe Screen 11) -->
-    <div class="mb-4">
-        <a href="{{ route('admin.reports.index', ['status' => 'pending']) }}" class="text-decoration-none fw-semibold text-secondary">
-            <i class="bi bi-arrow-left"></i> {{ __('messages.back_to_pending') }}
+    <!-- Breadcrumb Navigation (Screen 11) -->
+    <div class="d-flex align-items-center text-muted small mb-3">
+        <a href="{{ route('admin.dashboard') }}" class="text-decoration-none text-muted">
+            <i class="bi bi-house-door me-1"></i>{{ __('messages.dashboard') }}
         </a>
+        <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+        <a href="{{ route('admin.reports.index') }}" class="text-decoration-none text-muted">{{ __('messages.all_reports') }}</a>
+        <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+        <span class="text-dark fw-semibold">{{ __('messages.report_details') }} #{{ $report->id }}</span>
     </div>
 
     <div class="card border-0 rounded-4 shadow-sm bg-white p-4 p-md-5">

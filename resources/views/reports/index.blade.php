@@ -17,9 +17,6 @@
                     <a class="sidebar-link active" href="{{ route('reports.index') }}">
                         <i class="bi bi-journal-text"></i> {{ __('messages.my_reports') }}
                     </a>
-                    <a class="sidebar-link" href="{{ route('dashboard') }}#profile">
-                        <i class="bi bi-person"></i> {{ __('messages.profile') }}
-                    </a>
                     <hr class="my-2 text-muted">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
@@ -90,7 +87,7 @@
                                                 
                                                 <!-- View button -->
                                                 <a href="{{ route('reports.show', $rep) }}" class="btn btn-sm btn-outline-secondary py-1 px-2 rounded-2" title="{{ __('messages.view') }}">
-                                                    <i class="bi bi-eye"></i> {{ __('messages.view') }}
+                                                    <i class="bi bi-eye"></i>
                                                 </a>
 
                                                 <!-- Email Button (Only enabled when approved or emailed) -->
@@ -98,12 +95,12 @@
                                                     <form action="{{ route('reports.email', $rep) }}" method="POST" class="d-inline">
                                                         @csrf
                                                         <button type="submit" class="btn btn-sm btn-outline-primary py-1 px-2 rounded-2" title="{{ __('messages.email_action') }}">
-                                                            <i class="bi bi-envelope"></i> {{ __('messages.email_action') }}
+                                                            <i class="bi bi-envelope"></i>
                                                         </button>
                                                     </form>
                                                 @else
                                                     <button type="button" class="btn btn-sm btn-outline-secondary py-1 px-2 rounded-2 opacity-50" disabled title="{{ __('messages.only_approved_can_email') }}">
-                                                        <i class="bi bi-envelope"></i> {{ __('messages.email_action') }}
+                                                        <i class="bi bi-envelope"></i>
                                                     </button>
                                                 @endif
 

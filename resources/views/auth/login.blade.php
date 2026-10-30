@@ -17,7 +17,7 @@
                     <!-- Email -->
                     <div class="mb-3">
                         <label class="form-label small fw-semibold text-secondary">{{ __('messages.email') }}</label>
-                        <input type="email" name="email" class="form-control rounded-3 py-2 @error('email') is-invalid @enderror" value="{{ old('email', 'anandhi@example.com') }}" placeholder="anandhi@example.com" required autofocus>
+                        <input type="email" name="email" class="form-control rounded-3 py-2 @error('email') is-invalid @enderror" value="{{ old('email', 'anandhi@gmail.com') }}" placeholder="anandhi@gmail.com" required autofocus>
                         @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -29,7 +29,7 @@
                             <label class="form-label small fw-semibold text-secondary mb-0">{{ __('messages.password') }}</label>
                             <a href="#" class="text-muted small text-decoration-none">{{ __('messages.forgot_password') }}</a>
                         </div>
-                        <input type="password" name="password" class="form-control rounded-3 py-2 @error('password') is-invalid @enderror" placeholder="••••••••" value="password" required>
+                        <input type="password" name="password" class="form-control rounded-3 py-2 @error('password') is-invalid @enderror" placeholder="•••••••••" value="password" required>
                         @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

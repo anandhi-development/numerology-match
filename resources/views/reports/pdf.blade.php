@@ -5,40 +5,54 @@
     <title>Numerology Compatibility Report - {{ $report->person1_full_name }} &amp; {{ $report->person2_full_name }}</title>
     <style>
         @page {
-            margin: 20px;
+            margin: 12px;
             size: A4 portrait;
         }
+
+        @font-face {
+            font-family: 'Nirmala UI';
+            src: url('{{ str_replace('\\', '/', public_path('fonts/Nirmala.ttf')) }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Nirmala UI';
+            src: url('{{ str_replace('\\', '/', public_path('fonts/NirmalaB.ttf')) }}') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
         body {
-            font-family: 'DejaVu Sans', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Nirmala UI', 'DejaVu Sans', sans-serif;
             margin: 0;
-            padding: 15px;
+            padding: 4px;
             color: #2d3748;
             background-color: #ffffff;
-            font-size: 13px;
-            line-height: 1.5;
+            font-size: 11px;
+            line-height: 1.35;
         }
 
         /* Auspicious ornamental frame */
         .outer-border {
-            border: 3px double #b8860b;
-            padding: 8px;
-            border-radius: 12px;
+            border: 2px double #b8860b;
+            padding: 4px;
+            border-radius: 8px;
             background-color: #fffdfa;
         }
         .inner-border {
             border: 1px solid #d4af37;
-            padding: 24px;
-            border-radius: 8px;
+            padding: 14px 18px;
+            border-radius: 6px;
             background: #ffffff;
             position: relative;
         }
 
         .header-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .brand-name {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             color: #4a154b;
             letter-spacing: 2px;
@@ -46,61 +60,61 @@
             margin: 0;
         }
         .brand-subtitle {
-            font-size: 16px;
+            font-size: 13px;
             color: #6b21a8;
             font-weight: 600;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            margin-top: 2px;
+            margin-bottom: 2px;
         }
         .divider {
             height: 2px;
             background: linear-gradient(to right, transparent, #d4af37, transparent);
-            margin: 12px auto;
+            margin: 8px auto;
             width: 70%;
         }
 
         /* Profiles side by side */
         .profiles-table {
             width: 100%;
-            margin: 20px 0 25px;
+            margin: 8px 0 10px;
             border-collapse: collapse;
         }
         .profile-col {
             width: 44%;
             text-align: center;
             vertical-align: middle;
-            padding: 12px;
+            padding: 8px;
             background-color: #faf5ff;
-            border-radius: 10px;
+            border-radius: 8px;
             border: 1px solid #e9d5ff;
         }
         .heart-col {
             width: 12%;
             text-align: center;
             vertical-align: middle;
-            font-size: 26px;
+            font-size: 22px;
             color: #e11d48;
         }
         .profile-name {
-            font-size: 16px;
+            font-size: 13px;
             font-weight: bold;
             color: #1e293b;
-            margin: 6px 0 2px;
+            margin: 3px 0 1px;
         }
         .profile-dob {
-            font-size: 12px;
+            font-size: 11px;
             color: #64748b;
         }
         .avatar-badge {
             display: inline-block;
-            width: 44px;
-            height: 44px;
-            line-height: 44px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
             border-radius: 50%;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
             color: #ffffff;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .avatar-blue {
             background-color: #2563eb;
@@ -111,31 +125,31 @@
 
         /* Numbers Table */
         .section-heading {
-            font-size: 14px;
+            font-size: 12px;
             font-weight: bold;
             color: #4a154b;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         .numbers-table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
         .numbers-table th {
             background-color: #f3e8ff;
             color: #581c87;
-            padding: 10px;
-            font-size: 12px;
+            padding: 6px 8px;
+            font-size: 11px;
             font-weight: bold;
             text-align: center;
             border: 1px solid #e9d5ff;
         }
         .numbers-table td {
-            padding: 9px 12px;
-            font-size: 13px;
+            padding: 5px 8px;
+            font-size: 11px;
             text-align: center;
             border: 1px solid #f1f5f9;
         }
@@ -146,81 +160,83 @@
             text-align: left;
             font-weight: 600;
             color: #334155;
-            padding-left: 18px;
+            padding-left: 14px;
         }
         .badge-number {
             display: inline-block;
-            width: 24px;
-            height: 24px;
-            line-height: 24px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
             background-color: #f1f5f9;
             color: #1e293b;
             border-radius: 50%;
             font-weight: bold;
+            font-size: 11px;
             border: 1px solid #cbd5e1;
         }
 
         /* Compatibility Score */
         .score-container {
             text-align: center;
-            margin: 20px 0;
-            padding: 16px;
+            margin: 8px 0 10px;
+            padding: 8px;
             background-color: #fef2f2;
             border: 1px solid #fecdd3;
-            border-radius: 10px;
+            border-radius: 8px;
         }
         .score-label {
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             color: #9f1239;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .score-value {
-            font-size: 38px;
+            font-size: 26px;
             font-weight: 900;
             color: #059669;
             line-height: 1;
-            margin: 4px 0;
+            margin: 2px 0;
         }
 
         /* Result Reading */
         .result-box {
             background-color: #f8fafc;
-            border-left: 4px solid #6b21a8;
-            padding: 14px 18px;
+            border-left: 3px solid #6b21a8;
+            padding: 8px 12px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
         .result-box h4 {
-            margin: 0 0 6px;
-            font-size: 13px;
+            margin: 0 0 4px;
+            font-size: 11px;
             color: #4a154b;
             text-transform: uppercase;
         }
         .result-box p {
             margin: 0;
             color: #475569;
-            font-size: 12px;
-            line-height: 1.6;
+            font-size: 10.5px;
+            line-height: 1.4;
         }
         .tamil-summary {
-            margin-top: 8px !important;
-            padding-top: 8px;
+            margin-top: 6px !important;
+            padding-top: 6px;
             border-top: 1px dashed #e2e8f0;
             color: #64748b;
-            font-size: 11px;
+            font-size: 10px;
+            line-height: 1.4;
         }
 
         /* Footer */
         .report-footer {
-            margin-top: 25px;
+            margin-top: 8px;
             text-align: center;
-            font-size: 10px;
+            font-size: 9px;
             color: #94a3b8;
             border-top: 1px solid #f1f5f9;
-            padding-top: 12px;
+            padding-top: 6px;
         }
     </style>
 </head>

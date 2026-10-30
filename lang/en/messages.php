@@ -21,6 +21,21 @@ return [
     'feat_marriage' => 'Marriage Compatibility',
     'feat_insight' => 'Relationship Insight',
     'feat_report' => 'Detailed Report',
+    'feat_love_desc' => 'Deep emotional harmony',
+    'feat_marriage_desc' => 'Life-long partner compatibility',
+    'feat_insight_desc' => 'Personality and vibration match',
+    'feat_report_desc' => 'Printable & mobile ready PDF',
+
+    // Hero
+    'hero_vedic_tag' => 'Vedic & Pythagorean Numerology Compatibility',
+    'life_path' => 'Life Path',
+    'destiny' => 'Destiny',
+    'soul_urge' => 'Soul Urge',
+
+    // About Section
+    'about_title' => 'About :app',
+    'about_p1' => ':app evaluates compatibility by synthesizing two people\'s Life Path Number (derived from Date of Birth), Destiny / Expression Number (derived from the full name), Soul Urge Number (derived from vowel resonances), and Personality Number.',
+    'about_p2' => 'Inspired by traditional Tamil astrology and numerology wisdom as well as Pythagorean mathematics, our algorithm provides objective, uplifting insights for relationships, partnerships, and marriage.',
 
     // Auth
     'create_account' => 'Create an Account',
@@ -48,12 +63,14 @@ return [
 
     // Report Form
     'create_compat_report' => 'Create Compatibility Report',
+    'create_report_desc' => 'Enter personal details for both individuals to analyze life path and name resonance',
     'person1_details' => 'Person 1 Details',
     'person2_details' => 'Person 2 Details',
     'dob' => 'Date of Birth',
     'calculate_compatibility' => 'Calculate Compatibility',
 
     // Result Page
+    'analysis_complete' => 'Analysis Complete',
     'compatibility_result' => 'Compatibility Result',
     'compatibility_score' => 'Compatibility Score',
     'numerology_numbers' => 'Numerology Numbers',
@@ -65,6 +82,9 @@ return [
     'result' => 'Result',
     'generate_pdf' => 'Generate PDF',
     'save_report' => 'Save Report',
+    'recalculate' => 'Recalculate',
+    'send_to_my_email' => 'Send to My Email',
+    'awaiting_admin_review' => 'Awaiting administrator review. Once approved, the email option will be activated.',
     'saved_pending_notice' => 'Your report has been saved successfully and submitted for Admin approval. You will receive an email once approved.',
 
     // PDF & Actions
@@ -97,4 +117,6 @@ return [
     'rejected_success' => 'Report rejected successfully!',
     'email_sent_success' => 'Report approved and email sent with PDF attachment!',
     'only_approved_can_email' => 'Only approved reports can be sent via email.',
+    'view_all' => 'View All',
+    'no_reports_yet' => 'No reports created yet.',
 ];

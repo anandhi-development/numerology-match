@@ -1,24 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid px-lg-5 py-4">
+<div class="container-fluid px-lg-5 py-4" style="font-size: 0.82rem;">
     <div class="row g-4">
         
         <!-- Admin Sidebar -->
         <div class="col-lg-2">
             <div class="sidebar">
-                <nav class="nav flex-column">
+                <nav class="nav flex-column" style="font-size: 0.8rem;">
                     <a class="sidebar-link" href="{{ route('admin.dashboard') }}">
                         <i class="bi bi-speedometer2"></i> {{ __('messages.dashboard') }}
-                    </a>
-                    <a class="sidebar-link" href="{{ route('admin.reports.index', ['status' => 'pending']) }}">
-                        <i class="bi bi-clock-history text-warning"></i> {{ __('messages.pending_reports') }}
-                    </a>
-                    <a class="sidebar-link" href="{{ route('admin.reports.index', ['status' => 'approved']) }}">
-                        <i class="bi bi-check2-circle text-success"></i> {{ __('messages.approved_reports') }}
-                    </a>
-                    <a class="sidebar-link" href="{{ route('admin.reports.index', ['status' => 'rejected']) }}">
-                        <i class="bi bi-x-circle text-danger"></i> {{ __('messages.rejected_reports') }}
                     </a>
                     <a class="sidebar-link" href="{{ route('admin.reports.index') }}">
                         <i class="bi bi-journals text-primary"></i> {{ __('messages.all_reports') }}
@@ -39,15 +30,15 @@
 
         <!-- Users Table -->
         <div class="col-lg-10">
-            <div class="card border-0 rounded-4 shadow-sm bg-white p-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h5 class="fw-bold text-dark mb-0">{{ __('messages.users') }}</h5>
-                    <span class="badge bg-light text-secondary border px-3 py-2">Total Users: {{ $users->total() }}</span>
+            <div class="card border-0 rounded-4 shadow-sm bg-white p-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="fw-bold text-dark mb-0">{{ __('messages.users') }}</h6>
+                    <span class="badge bg-light text-secondary border px-3 py-1" style="font-size: 0.75rem;">Total Users: {{ $users->total() }}</span>
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table align-middle table-hover mb-0">
-                        <thead class="table-light small">
+                    <table class="table align-middle table-hover mb-0" style="font-size: 0.8rem;">
+                        <thead class="table-light">
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>

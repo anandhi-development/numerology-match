@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
 
     // Admin Routes
     Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
+        Route::get('/', [AdminReportController::class, 'index']);
         Route::get('/dashboard', [AdminReportController::class, 'index'])->name('dashboard');
         Route::get('/reports', [AdminReportController::class, 'index'])->name('reports.index');
         Route::get('/reports/{report}', [AdminReportController::class, 'show'])->name('reports.show');

@@ -48,12 +48,12 @@
                         </div>
                         <h4 class="fw-bold mb-2">{{ __('messages.app_name') }}</h4>
                         <p class="small text-white-50 mb-3">
-                            Vedic &amp; Pythagorean Numerology Compatibility
+                            {{ __('messages.hero_vedic_tag') }}
                         </p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">Life Path</span>
-                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">Destiny</span>
-                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">Soul Urge</span>
+                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">{{ __('messages.life_path') }}</span>
+                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">{{ __('messages.destiny') }}</span>
+                            <span class="badge bg-white text-dark px-3 py-2 rounded-pill fw-bold">{{ __('messages.soul_urge') }}</span>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <i class="bi bi-heart-fill"></i>
                 </div>
                 <h6 class="fw-bold text-dark mb-1">{{ __('messages.feat_love') }}</h6>
-                <p class="small text-muted mb-0">Deep emotional harmony</p>
+                <p class="small text-muted mb-0">{{ __('messages.feat_love_desc') }}</p>
             </div>
         </div>
 
@@ -80,7 +80,7 @@
                     <i class="bi bi-gem"></i>
                 </div>
                 <h6 class="fw-bold text-dark mb-1">{{ __('messages.feat_marriage') }}</h6>
-                <p class="small text-muted mb-0">Life-long partner compatibility</p>
+                <p class="small text-muted mb-0">{{ __('messages.feat_marriage_desc') }}</p>
             </div>
         </div>
 
@@ -90,7 +90,7 @@
                     <i class="bi bi-people-fill"></i>
                 </div>
                 <h6 class="fw-bold text-dark mb-1">{{ __('messages.feat_insight') }}</h6>
-                <p class="small text-muted mb-0">Personality and vibration match</p>
+                <p class="small text-muted mb-0">{{ __('messages.feat_insight_desc') }}</p>
             </div>
         </div>
 
@@ -100,7 +100,7 @@
                     <i class="bi bi-file-earmark-pdf-fill"></i>
                 </div>
                 <h6 class="fw-bold text-dark mb-1">{{ __('messages.feat_report') }}</h6>
-                <p class="small text-muted mb-0">Printable &amp; mobile ready PDF</p>
+                <p class="small text-muted mb-0">{{ __('messages.feat_report_desc') }}</p>
             </div>
         </div>
     </div>
@@ -109,12 +109,12 @@
     <div class="card border-0 rounded-4 p-5 shadow-sm bg-white mb-5" id="about">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h3 class="fw-bold text-dark mb-3">About {{ __('messages.app_name') }}</h3>
+                <h3 class="fw-bold text-dark mb-3">{{ __('messages.about_title', ['app' => __('messages.app_name')]) }}</h3>
                 <p class="text-secondary leading-relaxed mb-3">
-                    {{ __('messages.app_name') }} evaluates compatibility by synthesizing two people's <strong>Life Path Number</strong> (derived from Date of Birth), <strong>Destiny / Expression Number</strong> (derived from the full name), <strong>Soul Urge Number</strong> (derived from vowel resonances), and <strong>Personality Number</strong>.
+                    {{ __('messages.about_p1', ['app' => __('messages.app_name')]) }}
                 </p>
                 <p class="text-secondary leading-relaxed mb-0">
-                    Inspired by traditional Tamil astrology and numerology wisdom as well as Pythagorean mathematics, our algorithm provides objective, uplifting insights for relationships, partnerships, and marriage.
+                    {{ __('messages.about_p2') }}
                 </p>
             </div>
             <div class="col-md-4 text-center mt-4 mt-md-0">

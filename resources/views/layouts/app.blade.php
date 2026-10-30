@@ -96,7 +96,8 @@
             border-color: var(--brand-violet);
             color: #ffffff;
             font-weight: 600;
-            padding: 8px 20px;
+            font-size: 0.82rem;
+            padding: 6px 16px;
             border-radius: 8px;
             transition: all 0.2s;
         }
@@ -111,13 +112,26 @@
             border: 1.5px solid #d1d5db;
             color: #374151;
             font-weight: 600;
-            padding: 8px 18px;
+            font-size: 0.82rem;
+            padding: 6px 14px;
             border-radius: 8px;
             transition: all 0.2s;
         }
         .btn-brand-outline:hover {
             background-color: #f3f4f6;
             color: #111827;
+        }
+
+        /* Global button font size reduction */
+        .btn {
+            font-size: 0.82rem;
+        }
+        .btn-lg {
+            font-size: 0.88rem;
+            padding: 8px 20px;
+        }
+        .btn-sm {
+            font-size: 0.78rem;
         }
 
         /* App Sidebar */
@@ -303,6 +317,12 @@
                         <a href="{{ route('login') }}" class="btn btn-brand-outline">{{ __('messages.login') }}</a>
                         <a href="{{ route('register') }}" class="btn btn-brand-primary">{{ __('messages.sign_up') }}</a>
                     @else
+                        @if(Auth::user()->isAdmin())
+                            <a href="{{ route('admin.dashboard') }}" class="btn btn-danger btn-sm fw-bold px-3 py-1 rounded-pill">
+                                <i class="bi bi-shield-lock-fill me-1"></i> {{ __('messages.admin_portal') }}
+                            </a>
+                        @endif
+
                         <div class="dropdown">
                             <button class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 border-0 bg-light rounded-pill px-3 py-1" type="button" data-bs-toggle="dropdown">
                                 <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: 700; font-size: 0.85rem;">

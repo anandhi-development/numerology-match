@@ -5,12 +5,29 @@
     <div class="row justify-content-center">
         <div class="col-lg-9">
 
+            {{-- Breadcrumb Navigation (Left-aligned) --}}
+            <div class="d-flex align-items-center text-muted small mb-3">
+                <a href="{{ route('dashboard') }}" class="text-decoration-none text-muted">
+                    <i class="bi bi-house-door me-1"></i>{{ __('messages.dashboard') }}
+                </a>
+                <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+                @if($report)
+                    <a href="{{ route('reports.index') }}" class="text-decoration-none text-muted">{{ __('messages.my_reports') }}</a>
+                    <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+                    <span class="text-dark fw-semibold">#{{ $report->id }}</span>
+                @else
+                    <a href="{{ route('reports.create') }}" class="text-decoration-none text-muted">{{ __('messages.new_report') }}</a>
+                    <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+                    <span class="text-dark fw-semibold">{{ __('messages.compatibility_result') }}</span>
+                @endif
+            </div>
+
             <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white">
                 
                 <!-- Title -->
                 <div class="text-center mb-4">
                     <span class="badge px-3 py-2 rounded-pill fw-semibold mb-2" style="background-color: #f3e8ff; color: #6b21a8;">
-                        <i class="bi bi-patch-check-fill me-1"></i> Analysis Complete
+                        <i class="bi bi-patch-check-fill me-1"></i> {{ __('messages.analysis_complete') }}
                     </span>
                     <h2 class="fw-bold text-dark mb-1">{{ __('messages.compatibility_result') }}</h2>
                 </div>
@@ -108,7 +125,7 @@
                                 {{ __('messages.' . $report->status) }}
                             </span>
                             @if($report->status === 'pending')
-                                <div class="small mt-1 text-muted">Awaiting administrator review. Once approved, the email option will be activated.</div>
+                                <div class="small mt-1 text-muted">{{ __('messages.awaiting_admin_review') }}</div>
                             @elseif($report->status === 'rejected' && $report->admin_notes)
                                 <div class="small mt-1 text-danger">Note: {{ $report->admin_notes }}</div>
                             @endif
@@ -119,7 +136,7 @@
                             <form action="{{ route('reports.email', $report) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-outline-primary btn-sm">
-                                    <i class="bi bi-envelope-fill me-1"></i> Send to My Email
+                                    <i class="bi bi-envelope-fill me-1"></i> {{ __('messages.send_to_my_email') }}
                                 </button>
                             </form>
                         @endif
@@ -156,7 +173,7 @@
                         </form>
 
                         <a href="{{ route('reports.create') }}" class="btn btn-brand-outline btn-lg px-4 py-2">
-                            <i class="bi bi-arrow-counterclockwise me-1"></i> Recalculate
+                            <i class="bi bi-arrow-counterclockwise me-1"></i> {{ __('messages.recalculate') }}
                         </a>
                     @endif
                 </div>

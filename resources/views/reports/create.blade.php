@@ -5,6 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-lg-10">
 
+            {{-- Breadcrumb Navigation (Left-aligned) --}}
+            <div class="d-flex align-items-center text-muted small mb-3">
+                <a href="{{ route('dashboard') }}" class="text-decoration-none text-muted">
+                    <i class="bi bi-house-door me-1"></i>{{ __('messages.dashboard') }}
+                </a>
+                <i class="bi bi-chevron-right mx-2" style="font-size: 0.75rem;"></i>
+                <span class="text-dark fw-semibold">{{ __('messages.new_report') }}</span>
+            </div>
+
             <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white">
                 
                 <div class="text-center mb-5">
@@ -12,7 +21,7 @@
                         <i class="bi bi-suit-heart-fill me-1"></i> Numerology Comparison
                     </span>
                     <h2 class="fw-bold text-dark mb-1">{{ __('messages.create_compat_report') }}</h2>
-                    <p class="text-secondary small">Enter personal details for both individuals to analyze life path and name resonance</p>
+                    <p class="text-secondary small">{{ __('messages.create_report_desc') }}</p>
                 </div>
 
                 <form method="POST" action="{{ route('reports.calculate') }}">
@@ -32,7 +41,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.first_name') }} <span class="text-danger">*</span></label>
-                                    <input type="text" name="p1_first_name" class="form-control rounded-3 py-2 @error('p1_first_name') is-invalid @enderror" value="{{ old('p1_first_name', 'Arun') }}" placeholder="Arun" required pattern="[a-zA-Z\s]+" title="Letters and spaces only">
+                                    <input type="text" name="p1_first_name" class="form-control rounded-3 py-2 @error('p1_first_name') is-invalid @enderror" value="{{ old('p1_first_name') }}" placeholder="e.g. Arun" required pattern="[a-zA-Z\s]+" title="Letters and spaces only">
                                     @error('p1_first_name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -40,7 +49,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.last_name') }}</label>
-                                    <input type="text" name="p1_last_name" class="form-control rounded-3 py-2 @error('p1_last_name') is-invalid @enderror" value="{{ old('p1_last_name', 'Kumar') }}" placeholder="Kumar">
+                                    <input type="text" name="p1_last_name" class="form-control rounded-3 py-2 @error('p1_last_name') is-invalid @enderror" value="{{ old('p1_last_name') }}" placeholder="e.g. Kumar">
                                     @error('p1_last_name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -49,7 +58,7 @@
                                 <div class="mb-2">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.dob') }} <span class="text-danger">*</span></label>
                                     <div class="input-group">
-                                        <input type="date" name="p1_dob" class="form-control rounded-3 py-2 @error('p1_dob') is-invalid @enderror" value="{{ old('p1_dob', '1992-06-12') }}" max="{{ date('Y-m-d') }}" required>
+                                        <input type="date" name="p1_dob" class="form-control rounded-3 py-2 @error('p1_dob') is-invalid @enderror" value="{{ old('p1_dob') }}" max="{{ date('Y-m-d') }}" required>
                                     </div>
                                     @error('p1_dob')
                                         <div class="text-danger small mt-1">{{ $message }}</div>
@@ -70,7 +79,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.first_name') }} <span class="text-danger">*</span></label>
-                                    <input type="text" name="p2_first_name" class="form-control rounded-3 py-2 @error('p2_first_name') is-invalid @enderror" value="{{ old('p2_first_name', 'Priya') }}" placeholder="Priya" required pattern="[a-zA-Z\s]+" title="Letters and spaces only">
+                                    <input type="text" name="p2_first_name" class="form-control rounded-3 py-2 @error('p2_first_name') is-invalid @enderror" value="{{ old('p2_first_name') }}" placeholder="e.g. Priya" required pattern="[a-zA-Z\s]+" title="Letters and spaces only">
                                     @error('p2_first_name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -78,7 +87,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.last_name') }}</label>
-                                    <input type="text" name="p2_last_name" class="form-control rounded-3 py-2 @error('p2_last_name') is-invalid @enderror" value="{{ old('p2_last_name', 'Raman') }}" placeholder="Raman">
+                                    <input type="text" name="p2_last_name" class="form-control rounded-3 py-2 @error('p2_last_name') is-invalid @enderror" value="{{ old('p2_last_name') }}" placeholder="e.g. Raman">
                                     @error('p2_last_name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -87,7 +96,7 @@
                                 <div class="mb-2">
                                     <label class="form-label small fw-semibold text-secondary">{{ __('messages.dob') }} <span class="text-danger">*</span></label>
                                     <div class="input-group">
-                                        <input type="date" name="p2_dob" class="form-control rounded-3 py-2 @error('p2_dob') is-invalid @enderror" value="{{ old('p2_dob', '1995-11-18') }}" max="{{ date('Y-m-d') }}" required>
+                                        <input type="date" name="p2_dob" class="form-control rounded-3 py-2 @error('p2_dob') is-invalid @enderror" value="{{ old('p2_dob') }}" max="{{ date('Y-m-d') }}" required>
                                     </div>
                                     @error('p2_dob')
                                         <div class="text-danger small mt-1">{{ $message }}</div>
